@@ -65,7 +65,22 @@ export default function OccurrenceCard(props) {
             )
           }
           </div>
+          <div className="mt-4 flex gap-4 w-full items-center">
+           <span className='mb-2'>Domains:</span> 
+            {
+              Array.isArray(instance?.domain) && instance?.domain?.length > 0 && instance?.domain?.map((tag) => {
+                return (
+                  <span className="mb-2 mr-2 inline-block rounded-full bg-[#7692FF] px-3 py-1 text-[10px] font-semibold text-gray-900">
+                    {tag}
+                  </span>
+                )
+              })
+            }
 
+
+
+
+          </div>
           <div className='flex justify-end gap-4'>
           <button
         type="button"
