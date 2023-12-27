@@ -3,7 +3,9 @@ import { Home, BarChart, Copy, Bookmark, Users, Settings, Box, Database, PaintBu
 import { Tooltip } from 'antd'
 export default function Sidebar() {
   return (
-    <aside className="flex h-[88.5vh] w-16 flex-col items-center overflow-y-auto  bg-[#012a4a] py-8">
+    <aside className="flex h-auto min-h-screen w-[5rem]  lg:w-16 flex-col items-center overflow-y-auto  bg-[#012a4a] py-8">
+          {/* <aside className="flex h-[93vh] lg:h-[88.5vh] w-[5rem]  lg:w-16 flex-col items-center overflow-y-auto  bg-[#012a4a] py-8"> */}
+
       <nav className="flex flex-1 flex-col items-center space-y-6">
         <Tooltip placement="right" title={"Occurences"}>
           <a

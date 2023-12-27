@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
 import { Skeleton } from 'antd';
+import OccurenceHeader from './OccurenceHeader';
+import Tabs from './Tabs';
 
 export default function OccurrenceCard(props) {
   const [instance, setInstance] = useState({});
@@ -35,7 +37,15 @@ export default function OccurrenceCard(props) {
 
         </>
       ) : (
-        <div className='w-full h-auto rounded-xl p-4 py-8 text-white'>
+        <div className='h-full overflow-y-scroll Instance-grid'>
+        <OccurenceHeader
+        {...instance}
+
+         />
+         <Tabs/>
+
+
+        {/* <div className='w-full h-auto rounded-xl p-4 py-8 text-white'>
           <div className='occurrence_header text-3xl font-bold'>{instance?.title || ""}</div>
           <div className='occurrence_header text-sm font-normal mt-10'>{instance?.description || ""}</div>
 
@@ -97,6 +107,8 @@ export default function OccurrenceCard(props) {
       </button>
 
             </div>
+
+        </div> */}
 
         </div>
       )}

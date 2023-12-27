@@ -26,7 +26,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="relative w-full bg-[#012a4a]">
+        <div className="relative w-full bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
                 <div className="inline-flex items-center space-x-2">
                     <img src={HaxyLogo} alt="" className='w-[100px]' />        </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 <div className="ml-2 lg:hidden">
                     <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
                 </div>
-                {/* {isMenuOpen && (
+                {isMenuOpen && (
                     <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
                         <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                             <div className="px-5 pb-6 pt-5">
@@ -134,7 +134,7 @@ export default function Navbar() {
                             </div>
                         </div>
                     </div>
-                )} */}
+                )}
             </div>
         </div>
     )

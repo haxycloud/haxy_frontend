@@ -103,12 +103,12 @@ const OccurenceList = () => {
   ]
 
   return (
-    <div className='grid grid-cols-3 gap-2 overflow-y-scroll h-[70vh] Instance-grid'>
+    <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 overflow-y-scroll h-[70vh] Instance-grid'>
       {
-        Instances?.map((instance) => {
+        Instances?.map((instance,instanceIndex) => {
           return (
 
-            <InstanceCard {...instance} />
+            <InstanceCard key={instanceIndex} {...instance} />
           )
         })
       }
